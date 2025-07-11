@@ -153,14 +153,14 @@ docker run -p 8000:8000 --env-file .env qiulao
 
 ### 云平台部署
 
-项目支持部署到多个云平台：
+项目支持部署到多个**完全免费**的云平台：
 
-- **Render**: 一键部署 (推荐)
-- **Railway**: 快速部署
-- **Vercel**: 静态部署
-- **Heroku**: 传统部署
+- **Railway**: 无需信用卡，每月 $5 免费额度 (推荐)
+- **PythonAnywhere**: 完全免费套餐
+- **Glitch**: 适合小型项目
+- **Replit**: 开发友好的免费部署
 
-详见 [部署指南](docs/deployment.md)
+详见 [部署指南](deployment.md)
 
 ## 贡献
 

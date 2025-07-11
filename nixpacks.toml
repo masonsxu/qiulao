@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["...", "python312"]
+
+[phases.install]
+cmds = [
+    "pip install uv",
+    "uv pip install --system -r requirements.txt"
+]
+
+[phases.build]
+cmds = ["echo 'Build phase complete'"]
+
+[start]
+cmd = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
