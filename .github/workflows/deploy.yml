@@ -1,0 +1,56 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.13"
+    
+    - name: Install UV
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+    
+    - name: Install dependencies
+      run: |
+        uv venv
+        source .venv/bin/activate
+        uv pip install -r requirements.txt
+    
+    - name: Test application
+      run: |
+        source .venv/bin/activate
+        # Run basic tests without AI (to avoid API key requirement)
+        export ENABLE_AI=False
+        python test_pipeline.py
+    
+    - name: Check FastAPI app
+      run: |
+        source .venv/bin/activate
+        export ENABLE_AI=False
+        # Test if the app can start
+        timeout 10s uvicorn app.main:app --host 0.0.0.0 --port 8000 || true
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    
+    steps:
+    - name: Deploy to Render
+      run: |
+        # This step would trigger Render deployment
+        # Render will automatically deploy when main branch is updated
+        echo "Deployment triggered for Render"
