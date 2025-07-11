@@ -1,0 +1,25 @@
+岗位名称：高级React开发工程师
+
+岗位要求：
+1. 本科及以上学历，计算机相关专业
+2. 5年以上前端开发经验，3年以上React开发经验
+3. 精通React生态系统，包括Redux、React Router、React Hooks等
+4. 熟练掌握TypeScript，具备类型系统设计能力
+5. 深入理解前端工程化，熟悉Webpack、Rollup等构建工具
+6. 熟悉Node.js，具备全栈开发能力优先
+7. 了解微前端架构，有相关实践经验
+8. 具备良好的代码规范意识和团队协作能力
+9. 有大型项目架构设计经验
+10. 熟悉性能优化，有实际优化案例
+
+技术栈要求：
+- 必备：React, TypeScript, JavaScript ES6+, HTML5, CSS3
+- 优先：Next.js, Nest.js, GraphQL, Docker, Kubernetes
+- 工具：Git, Webpack, ESLint, Prettier, Jest
+
+职责描述：
+- 负责前端架构设计和核心功能开发
+- 制定前端技术规范和最佳实践
+- 指导初级开发人员，进行代码Review
+- 与产品、设计团队协作，确保项目质量和进度
+- 持续优化系统性能和用户体验
