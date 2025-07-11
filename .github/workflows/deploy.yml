@@ -13,35 +13,31 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up Python 3.13
+    - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: "3.13"
+        python-version: "3.12"
     
     - name: Install UV
       run: |
         curl -LsSf https://astral.sh/uv/install.sh | sh
+        source ~/.bashrc || true
+        export PATH="$HOME/.cargo/bin:$PATH"
         echo "$HOME/.cargo/bin" >> $GITHUB_PATH
     
     - name: Install dependencies
       run: |
-        uv venv
+        export PATH="$HOME/.cargo/bin:$PATH"
+        uv --version
+        uv venv --python 3.12
         source .venv/bin/activate
         uv pip install -r requirements.txt
     
     - name: Test application
       run: |
         source .venv/bin/activate
-        # Run basic tests without AI (to avoid API key requirement)
         export ENABLE_AI=False
-        python test_pipeline.py
-    
-    - name: Check FastAPI app
-      run: |
-        source .venv/bin/activate
-        export ENABLE_AI=False
-        # Test if the app can start
-        timeout 10s uvicorn app.main:app --host 0.0.0.0 --port 8000 || true
+        python test_ci.py
 
   deploy:
     needs: test
