@@ -30,7 +30,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/qiulao.git
+git clone https://github.com/masonsxu/qiulao.git
 cd qiulao
 
 # 创建虚拟环境并安装依赖
@@ -44,7 +44,7 @@ uv pip install -r requirements.txt
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/qiulao.git
+git clone https://github.com/masonsxu/qiulao.git
 cd qiulao
 
 # 创建虚拟环境
@@ -172,8 +172,8 @@ docker run -p 8000:8000 --env-file .env qiulao
 
 ## 支持
 
-- 🐛 [报告问题](https://github.com/your-username/qiulao/issues)
-- 💡 [功能建议](https://github.com/your-username/qiulao/discussions)
+- 🐛 [报告问题](https://github.com/masonsxu/qiulao/issues)
+- 💡 [功能建议](https://github.com/masonsxu/qiulao/discussions)
 - 📖 [查看文档](docs/)
 
 ---
@@ -195,7 +195,7 @@ An AI-powered resume optimization system built with FastAPI that helps users opt
 
 1. Clone and setup:
 ```bash
-git clone https://github.com/your-username/qiulao.git
+git clone https://github.com/masonsxu/qiulao.git
 cd qiulao
 uv venv && source .venv/bin/activate
 uv pip install -r requirements.txt

@@ -8,7 +8,7 @@
 
 如果您发现了 bug 或有功能建议：
 
-1. 查看 [Issues](https://github.com/your-username/qiulao/issues) 是否已有相关问题
+1. 查看 [Issues](https://github.com/masonsxu/qiulao/issues) 是否已有相关问题
 2. 如果没有，请创建新的 Issue，详细描述：
    - 问题的具体表现
    - 复现步骤
@@ -20,7 +20,7 @@
 1. **Fork 项目**
    ```bash
    # Fork 后克隆到本地
-   git clone https://github.com/your-username/qiulao.git
+   git clone https://github.com/masonsxu/qiulao.git
    cd qiulao
    ```
 
@@ -140,8 +140,8 @@ app/
 
 ## 联系方式
 
-- GitHub Issues: [项目问题讨论](https://github.com/your-username/qiulao/issues)
-- GitHub Discussions: [功能建议和讨论](https://github.com/your-username/qiulao/discussions)
+- GitHub Issues: [项目问题讨论](https://github.com/masonsxu/qiulao/issues)
+- GitHub Discussions: [功能建议和讨论](https://github.com/masonsxu/qiulao/discussions)
 
 ## 行为准则
 
